@@ -60,16 +60,18 @@ In Vercel dashboard:
 
 After deployment, your API will be available at:
 - Health Check: `https://your-api.vercel.app/api/health`
+- Root: `https://your-api.vercel.app/`
 - Authentication: `https://your-api.vercel.app/api/auth`
 - Users: `https://your-api.vercel.app/api/users`
 - Learning Paths: `https://your-api.vercel.app/api/learning-path`
 
 ## Important Notes
 
-1. **Serverless Functions**: Vercel uses serverless functions, so connection pooling is optimized for this environment
-2. **Cold Starts**: First request after inactivity may be slower
-3. **Function Timeout**: Maximum execution time is 30 seconds (configurable)
-4. **Database Connections**: MongoDB connections are cached to improve performance
+1. **Entry Point**: The main entry point is `index.js` in the root directory (Vercel standard)
+2. **Serverless Functions**: Vercel uses serverless functions, so connection pooling is optimized for this environment
+3. **Cold Starts**: First request after inactivity may be slower
+4. **Function Timeout**: Maximum execution time is 30 seconds (configurable)
+5. **Database Connections**: MongoDB connections are cached to improve performance
 
 ## Troubleshooting
 
