@@ -13,7 +13,6 @@ yarn-error.log*
 
 # Development files
 server.js
-api/index.js
 nodemon.json
 
 # IDE files
