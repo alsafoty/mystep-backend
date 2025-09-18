@@ -1,9 +1,4 @@
 {
   "version": 2,
-  "name": "mystep-api",
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 30
-    }
-  }
+  "name": "mystep-api"
 }
