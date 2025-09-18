@@ -7,7 +7,7 @@ echo "=================================================="
 # Check if required files exist
 echo "📁 Checking required files..."
 
-files=("package.json" "vercel.json" "index.js" ".env.example" ".vercelignore")
+files=("package.json" "vercel.json" "api/index.js" ".env.example" ".vercelignore")
 
 for file in "${files[@]}"; do
     if [ -f "$file" ]; then
@@ -38,7 +38,7 @@ echo ""
 echo "🔧 Checking vercel.json configuration..."
 
 # Check if vercel.json has proper structure
-if grep -q "index.js" vercel.json; then
+if grep -q "api/index.js" vercel.json; then
     echo "✅ API entry point configured"
 else
     echo "❌ API entry point not configured"
@@ -53,7 +53,7 @@ fi
 echo ""
 echo "🌐 Checking API entry point..."
 
-if [ -f "index.js" ] && [ -s "index.js" ]; then
+if [ -f "api/index.js" ] && [ -s "api/index.js" ]; then
     echo "✅ API entry point exists and has content"
 else
     echo "❌ API entry point is missing or empty"
