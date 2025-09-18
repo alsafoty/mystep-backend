@@ -17,12 +17,24 @@ npm i -g vercel
 
 In your Vercel dashboard, add these environment variables:
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `MONGODB_URI` | MongoDB connection string | `mongodb+srv://user:pass@cluster.mongodb.net/mystep` |
+**IMPORTANT**: Add these in your Vercel project dashboard under Settings > Environment Variables
+
+| Variable | Description | Example Value |
+|----------|-------------|---------------|
+| `MONGODB_URI` | MongoDB connection string | `mongodb+srv://user:pass@cluster.mongodb.net/mystep?retryWrites=true&w=majority` |
 | `JWT_SECRET` | Secret key for JWT tokens | `your-super-secret-jwt-key` |
+| `JWT_EXPIRE` | JWT token expiration | `7d` |
 | `CLIENT_URL` | Your frontend domain | `https://your-frontend.vercel.app` |
 | `NODE_ENV` | Environment | `production` |
+
+**Steps to add environment variables in Vercel:**
+1. Go to your Vercel dashboard
+2. Select your project
+3. Click on "Settings" tab
+4. Click on "Environment Variables" in the sidebar
+5. Add each variable name and value
+6. Make sure to select "Production", "Preview", and "Development" environments
+7. Click "Save"
 
 ### 3. Deploy to Vercel
 
