@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "mystep-api",
-  "builds": [
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
